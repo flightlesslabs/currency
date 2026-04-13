@@ -3,7 +3,6 @@
 # =====================
 .deno/
 .cache/
-deno.lock
 
 # =====================
 # Dependencies (if using npm: imports)
