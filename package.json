@@ -1,0 +1,16 @@
+{
+  "name": "@flightlesslabs/currency",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Country and currency mapping utility",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/mod.ts"
+  },
+  "files": [
+    "src"
+  ]
+}
