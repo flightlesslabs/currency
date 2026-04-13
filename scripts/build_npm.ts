@@ -18,7 +18,7 @@ await build({
     publishConfig: {
       'access': 'public',
     },
-    description: 'Your package.',
+    description: pkg.description,
     license: 'MIT',
     repository: {
       type: 'git',
