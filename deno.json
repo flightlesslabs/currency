@@ -18,7 +18,7 @@
   },
   "exports": "./src/mod.ts",
   "tasks": {
-    "docs": "deno doc --html --name='@flightlesslabs/currency' --output=docs src/mod.ts",
+    "docs": "npx typedoc",
     "preview": "deno run --allow-net --allow-read jsr:@std/http/file-server ./docs",
     "build:npm": "deno run -A scripts/build_npm.ts",
     "publish:npm": "deno task build:npm && cd dist && npm publish && cd ..",

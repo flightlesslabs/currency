@@ -1,0 +1,10 @@
+{
+  "name": "@flightlesslabs/currency",
+  "entryPoints": ["./src/mod.ts"],
+  "out": "docs",
+  "exclude": ["**/scripts/**", "**/*.test.ts", "**/*.spec.ts"],
+  "tsconfig": "tsconfig.json",
+  "navigation": {
+    "includeCategories": true
+  }
+}

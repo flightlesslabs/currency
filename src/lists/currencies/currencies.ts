@@ -3,7 +3,7 @@
  * Provides a typed list of ISO currency metadata.
  */
 
-import type { CurrencyCode } from '@flightlesslabs/currency';
+import type { CurrencyCode } from '../currencyCodes/currencyCodes.ts';
 
 /**
  * Represents a currency entry mapped to a country.
