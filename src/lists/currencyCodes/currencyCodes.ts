@@ -1,12 +1,12 @@
 /**
  * ISO 4217 currency codes (subset).
  *
- * A readonly list of standardized 3-letter currency codes defined by the ISO 4217 specification.
- * Each code uniquely identifies a currency used in international finance and commerce.
+ * A readonly list of standardized 3-letter ISO 4217 currency codes.
+ * Each code represents a real-world currency used in international finance and commerce.
  *
  * ⚠️ Notes:
- * - This is a curated subset, not the complete ISO 4217 list
- * - All codes are uppercase and immutable (`as const`)
+ * - This is a curated subset, not the full ISO 4217 list
+ * - All values are uppercase and immutable (`as const`)
  * - Includes widely used global currencies (USD, EUR, INR, etc.)
  *
  * 📦 Use cases:
@@ -18,13 +18,13 @@
  * 🚀 Example:
  * ```ts
  * const code: CurrencyCode = "INR"; // ✅ valid
- * const invalid: CurrencyCode = "ABC"; // ❌ TypeScript error
+ * const invalid: CurrencyCode = "ABC"; // ❌ Type error
  * ```
  *
  * 💡 Tip:
- * Use the derived `CurrencyCode` type for full type safety across your application.
+ * Use `CurrencyCode` for full type safety across your application.
  */
-export const ISO_CURRENCY_CODES = [
+export const currencyCodes = [
   'AED',
   'AFN',
   'ALL',
@@ -104,8 +104,14 @@ export const ISO_CURRENCY_CODES = [
 ] as const;
 
 /**
- * Union type of supported ISO currency codes.
+ * Union type of supported ISO 4217 currency codes.
  *
- * Derived from `ISO_CURRENCY_CODES` to ensure type safety and consistency.
+ * Derived from `currencyCodes` to ensure type safety and consistency.
+ *
+ * @example
+ * ```ts
+ * const code: CurrencyCode = "USD";
+ * const invalid: CurrencyCode = "XXX"; // ❌ Type error
+ * ```
  */
-export type CurrencyCode = typeof ISO_CURRENCY_CODES[number];
+export type CurrencyCode = typeof currencyCodes[number];
