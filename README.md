@@ -42,7 +42,7 @@ deno task preview
 
 ## Develop
 
-Publish to npm and jsr
+Publish to npm
 
 ```bash
 deno task publish
