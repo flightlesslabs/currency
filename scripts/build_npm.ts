@@ -9,6 +9,7 @@ await emptyDir(`./${npmFolder}`);
 await build({
   entryPoints: ['./src/mod.ts'],
   outDir: `./${npmFolder}`,
+  test: false,
   shims: {
     // see JS docs for overview and more options
     deno: true,
