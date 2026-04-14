@@ -20,8 +20,8 @@
   "tasks": {
     "docs": "deno doc --html --name='@flightlesslabs/currency' --output=docs src/mod.ts",
     "preview": "deno run --allow-net --allow-read jsr:@std/http/file-server ./docs",
-    "build": "deno run -A scripts/build_npm.ts",
-    "publish:npm": "deno task build && cd dist && npm publish && cd ..",
+    "build:npm": "deno run -A scripts/build_npm.ts",
+    "publish:npm": "deno task build:npm && cd dist && npm publish && cd ..",
     "publish": "deno task publish:npm"
   },
   "imports": {
