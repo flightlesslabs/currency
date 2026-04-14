@@ -1,8 +1,8 @@
 {
   "name": "@flightlesslabs/currency",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
-  "description": "A lightweight TypeScript library providing country and currency mappings, including ISO codes, symbols, and utility functions.",
+  "description": "A lightweight TypeScript library providing country and currency mappings, including ISO codes and symbols.",
   "publishConfig": {
     "access": "public"
   },

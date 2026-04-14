@@ -1,8 +1,13 @@
 # @flightlesslabs/currency
 
-A lightweight TypeScript library providing country and currency mappings, including ISO codes, symbols, and utility functions.
+A lightweight TypeScript library providing country and currency mappings, including ISO codes and symbols.
 
-[Checkout docs](https://flightlesslabs.github.io/currency/) | [Github](https://github.com/flightlesslabs/currency) | [npm](https://www.npmjs.com/package/@flightlesslabs/currency) | [JSR](https://jsr.io/@flightlesslabs/currency)
+## 🔗 Links
+
+- 📚 Docs: https://flightlesslabs.github.io/currency/
+- 💻 GitHub: https://github.com/flightlesslabs/currency
+- 📦 npm: https://www.npmjs.com/package/@flightlesslabs/currency
+- 🧩 JSR: https://jsr.io/@flightlesslabs/currency
 
 ## 🚀 Installation
 
