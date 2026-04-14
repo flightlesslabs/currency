@@ -2,6 +2,8 @@
 
 A lightweight TypeScript library providing country and currency mappings, including ISO codes, symbols, and utility functions.
 
+[Github](https://github.com/flightlesslabs/currency) | [npm](https://www.npmjs.com/package/@flightlesslabs/currency) | [JSR](https://jsr.io/@flightlesslabs/currency)
+
 ## 🚀 Installation
 
 JSR
