@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1
+
+### Fixed
+- Description fixed
+
 ## 0.2.0
 
 ### Added
