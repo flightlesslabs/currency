@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write
 
+# 👇 Opt into Node 24 now (fixes warning)
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -18,37 +19,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v5
 
-      # -------------------------
-      # Setup Deno (your runtime)
-      # -------------------------
       - name: Setup Deno
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
 
-      # -------------------------
-      # Setup Node 24 (REQUIRED)
-      # -------------------------
-      - name: Setup Node 24
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-
-      # -------------------------
-      # Install TypeDoc
-      # -------------------------
-      - name: Install dependencies
-        run: npm install typedoc
-
-      # -------------------------
-      # Generate docs
-      # -------------------------
       - name: Generate docs
         run: deno task docs
 
-      # -------------------------
-      # Deploy to GitHub Pages
-      # -------------------------
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
