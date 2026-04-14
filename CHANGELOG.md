@@ -1,6 +1,4 @@
 # Changelog
 
-## 0.0.4
-
-### Patch Changes
-- Test setup
+## 0.1.0
+- First release
