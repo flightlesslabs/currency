@@ -25,3 +25,27 @@ npm i @flightlesslabs/currency
 ## 🗃️ Documentation
 
 *[Checkout docs](https://flightlesslabs.github.io/currency/)*
+
+---
+
+## Docs
+
+Build docs
+
+```bash
+deno task docs
+```
+
+Preview docs
+
+```bash
+deno task preview
+```
+
+## Develop
+
+Publish to npm and jsr
+
+```bash
+deno task publish
+```

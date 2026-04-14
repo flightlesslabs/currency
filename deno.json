@@ -1,10 +1,14 @@
 {
   "name": "@flightlesslabs/currency",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "description": "A lightweight TypeScript library providing country and currency mappings, including ISO codes, symbols, and utility functions.",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flightlesslabs/currency.git"
   },
   "fmt": {
     "useTabs": false,
@@ -15,7 +19,11 @@
   "exports": "./src/mod.ts",
   "tasks": {
     "docs": "deno doc --html --output=docs src/mod.ts",
-    "build": "deno run -A scripts/build_npm.ts"
+    "preview": "deno run --allow-net --allow-read jsr:@std/http/file-server ./docs",
+    "build": "deno run -A scripts/build_npm.ts",
+    "publish:npm": "deno task build && cd dist && npm publish && cd ..",
+    "publish:jsr": "deno publish",
+    "publish": "deno task publish:npm && deno task publish:jsr"
   },
   "imports": {
     "@deno/dnt": "jsr:@deno/dnt@^0.42.3",

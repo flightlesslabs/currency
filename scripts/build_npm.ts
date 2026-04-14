@@ -2,11 +2,13 @@
 import { build, emptyDir } from '@deno/dnt';
 const pkg = JSON.parse(await Deno.readTextFile('./deno.json'));
 
-await emptyDir('./dist');
+const npmFolder = 'dist';
+
+await emptyDir(`./${npmFolder}`);
 
 await build({
   entryPoints: ['./src/mod.ts'],
-  outDir: './dist',
+  outDir: `./${npmFolder}`,
   shims: {
     // see JS docs for overview and more options
     deno: true,
@@ -19,13 +21,14 @@ await build({
       'access': 'public',
     },
     description: pkg.description,
-    license: 'MIT',
+    license: pkg.license,
     repository: {
       type: 'git',
       url: 'git+https://github.com/flightlesslabs/currency.git',
     },
   },
   postBuild() {
-    Deno.copyFileSync('README.md', 'dist/README.md');
+    Deno.copyFileSync('README.md', `${npmFolder}/README.md`);
+    Deno.copyFileSync('CHANGELOG.md', `${npmFolder}/CHANGELOG.md`);
   },
 });
