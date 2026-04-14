@@ -30,5 +30,6 @@ await build({
   postBuild() {
     Deno.copyFileSync('README.md', `${npmFolder}/README.md`);
     Deno.copyFileSync('CHANGELOG.md', `${npmFolder}/CHANGELOG.md`);
+    Deno.copyFileSync('LICENSE', `${npmFolder}/LICENSE`);
   },
 });
