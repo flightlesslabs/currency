@@ -6,33 +6,22 @@
 import type { CurrencyCode } from '../currencyCodes/currencyCodes.ts';
 
 /**
- * Represents a currency entry mapped to a country.
+ * Represents a country–currency mapping.
  *
- * Combines human-readable currency metadata with a strongly typed
- * ISO 4217 currency code.
+ * A single entry linking a country/region to its official currency.
  *
- * - `country`: Common English name of the country or region
- * - `currencyName`: Display name of the currency
- * - `currencyCode`: ISO 4217 3-letter currency code (type-safe)
- *
- * 📦 Use cases:
- * - Currency dropdowns / selectors
- * - Mapping country → currency
- * - Displaying currency labels in UI
- * - Validating currency data with strict types
- *
- * 💡 Example:
+ * @example
  * ```ts
- * const india: Currency = {
- *   country: "India",
- *   currencyName: "Indian rupee",
- *   currencyCode: "INR",
+ * const usd: Currency = {
+ *   country: "United States",
+ *   currencyName: "US dollar",
+ *   currencyCode: "USD",
  * };
  * ```
  *
- * ⚠️ Note:
- * A single currency can be used by multiple countries (e.g. EUR, USD),
- * but this type represents a single country–currency pairing.
+ * @remarks
+ * - Some currencies are shared across multiple countries (e.g. EUR, USD)
+ * - This dataset uses one representative country per currency
  */
 export type Currency = {
   country: string;
@@ -41,38 +30,20 @@ export type Currency = {
 };
 
 /**
- * ISO 4217 currency dataset (subset).
+ * Currency dataset (ISO 4217 subset).
  *
- * A curated list of currencies mapped to their primary country usage.
- * Each entry represents a country–currency pair with:
+ * A curated list of country–currency mappings.
+ * Each entry links a country/region to its primary currency.
  *
- * - `country`: Common English name of the country or region
- * - `currencyName`: Human-readable currency name
- * - `currencyCode`: ISO 4217 3-letter currency code
+ * @remarks
+ * - Not exhaustive ISO 4217 coverage
+ * - One representative country per currency
+ * - Useful for UI dropdowns and display mapping
  *
- * ⚠️ Notes:
- * - This is a simplified dataset (not exhaustive)
- * - Some currencies are used by multiple countries (e.g. USD, EUR),
- *   but are listed here with a single representative country/region
- * - "Eurozone" is used as a logical grouping for EUR
- *
- * 📦 Use cases:
- * - Dropdowns / select inputs
- * - Currency validation
- * - Mapping currency codes → display names
- * - Basic internationalization (i18n)
- *
- * 🚀 Tip:
- * For fast lookups by currency code, consider transforming this
- * into a map:
- *
+ * @example
  * ```ts
- * const byCode = Object.fromEntries(
- *   currencies.map(c => [c.currencyCode, c])
- * );
+ * const usd = currencies.find(c => c.currencyCode === "USD");
  * ```
- *
- * @type {Currency[]}
  */
 export const currencies: Currency[] = [
   {
